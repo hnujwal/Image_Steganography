@@ -1,6 +1,7 @@
 #ifndef ENCODE_H
 #define ENCODE_H
-#include "types.h" // Contains user defined types
+#include "types.h"
+// Contains user defined types
 
 /* 
  * Structure to store information required for
@@ -84,5 +85,6 @@ Status encode_byte_to_lsb(char data, char *image_buffer);
 
 /* Copy remaining image bytes from src to stego image after encoding */
 Status copy_remaining_img_data(FILE *fptr_src, FILE *fptr_stego_image);
+
 
 #endif
