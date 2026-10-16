@@ -79,7 +79,7 @@ Status decode_secret_data_form_lsb(DecodeInfo *decodeInfo)
 }
 Status read_and_validate_decode_args(char *argv[],DecodeInfo *decodeInfo)
 {
-    if(argv[1]!=NULL && strcmp(strstr(argv[2],"."),".bmp")==0)
+    if(argv[2]!=NULL && strcmp(strstr(argv[2],"."),".bmp")==0)
     {
         decodeInfo->stego_image_fname=argv[2];
     }
@@ -88,7 +88,7 @@ Status read_and_validate_decode_args(char *argv[],DecodeInfo *decodeInfo)
         printf("ERROR: pleas enter the valide extention\n");
         return e_failure;
     }
-    if(argv[2]==NULL)
+    if(argv[3]==NULL)
     {
         strcpy(decodeInfo->src_fname,"decode_secret");
     }

@@ -43,6 +43,10 @@ int main(int argc, char *argv[])
                 printf("ERROR: Error in decoding\n");
             }
         }
+        else
+        {
+            printf("ERROR: Invalid arguments\n");
+        }
     }
     else
     {
@@ -56,11 +60,11 @@ int main(int argc, char *argv[])
 }
 OperationType check_operation_type(char *argv[])
 {
-    if(strcmp(argv[1],"-e")==0)
+    if(argv[1]!=NULL && strcmp(argv[1],"-e")==0)
     {
         return e_encode;
     }
-    else if(strcmp(argv[1],"-d")==0)
+    else if(argv[1]!=NULL && strcmp(argv[1],"-d")==0)
     {
         return e_decode;
     }
